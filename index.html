@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" title="theme" href="#">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<title>Portfolio</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container flex-js-sb">
+				<button data-theme="dark" class="header__button-theme" type="button">
+					<img src="img/moon.svg" alt="">
+				</button>
+				<button data-theme="light" class="header__button-theme" type="button">
+					<img src="img/sun.svg" alt="">
+				</button>
+			</div>
+		</header>
+		<main class="main">
+			<section class="info">
+				<div class="container-two flex-js-c">
+					<img class="info__avatar-logo" id="myImg" src="img/avatar.jpg" alt="" draggable="false">
+					<!-- модальное окно -->
+					<div id="myModal" class="modal">
+						<div class="modal-wrapper">
+							<span class="close">
+								&times;
+							</span>
+							<img class="modalContent" draggable="false" id="img01" alt="">
+						</div>
+					</div>
+					<h2 class="info__title">
+						Терсенев Владислав
+					</h2>
+					<p class="info__description">
+						Web – разработчик
+					</p>
+					<div class="info__social">
+						<a href="https://t.me/EroyEroy" target="_blank"><img src="img/telegram.svg" alt=""></a>
+						<a href="https://vk.com/eroyu" target="_blank"><img src="img/vk.svg" alt=""></a>
+						<a href="https://github.com/EroyEroy" target="_blank"><img src="img/github.svg" alt=""></a>
+					</div>
+					<div class="info__cards">
+						<div class="card">
+							<span class="card__number">
+								1
+							</span>
+							<div class="card__description">
+								годы
+								<br>
+								работы
+							</div>
+						</div>
+						<div class="card">
+							<span class="card__number">
+								3
+							</span>
+							<div class="card__description">
+								законченных
+								<br>
+								проектов
+							</div>
+						</div>
+						<div class="card">
+							<span class="card__number">
+								1
+							</span>
+							<div class="card__description">
+								довольных
+								<br>
+								клиентов
+							</div>
+						</div>
+					</div>
+					<a href="file/cv.pdf" class="info__cv-button" download="cv">
+						Скачать CV
+						<img src="img/arrow_down.svg" alt="" draggable="false">
+					</a>
+					<div class="info__switches">
+						<button class="info__portfolio-btn active" type="button">
+							Портфолио
+						</button>
+						<button class="info__skills-btn" type="button">
+							Навыки
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="illustrate">
+				<div class="container">
+					<div class="illustrate__portfolio-cards active">
+						<div class="illustrate__portfolio-card">
+							<img src="img/cat.jpg" alt="" draggable="false">
+							<div class="illustrate__card-info">
+								<div class="illustrate__card-title">
+									Тестовый заголовок
+								</div>
+								<a href="#">
+									Смотреть
+								</a>
+							</div>
+						</div>
+						<div class="illustrate__portfolio-card">
+							<img src="img/cat.jpg" alt="" draggable="false">
+							<div class="illustrate__card-info">
+								<div class="illustrate__card-title">
+									Тестовый заголовок
+								</div>
+								<a href="#">
+									Смотреть
+								</a>
+							</div>
+						</div>
+						<div class="illustrate__portfolio-card">
+							<img src="img/cat.jpg" alt="" draggable="false">
+							<div class="illustrate__card-info">
+								<div class="illustrate__card-title">
+									Тестовый заголовок
+								</div>
+								<a href="#">
+									Смотреть
+								</a>
+							</div>
+						</div>
+						<div class="illustrate__portfolio-card">
+							<img src="img/cat.jpg" alt="" draggable="false">
+							<div class="illustrate__card-info">
+								<div class="illustrate__card-title">
+									Тестовый заголовок
+								</div>
+								<a href="#">
+									Смотреть
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="illustrate__skills">
+						<h2 class="illustrate__skills-title">
+							Frontend – разработчик
+						</h2>
+						<div class="illustrate__skills-cards">
+							<div class="container-two">
+								<div class="illustrate__skills-card">
+									<div class="illustrate__skills-mark">
+										<img src="img/mark.svg" alt="" draggable="false">
+									</div>
+									<div class="illustrate__skills-info">
+										<div class="illustrate__skills-subtitle">
+											HTML
+										</div>
+										<div class="illustrate__skill-desctiption">
+											Средний
+										</div>
+									</div>
+								</div>
+								<div class="illustrate__skills-card">
+									<div class="illustrate__skills-mark">
+										<img src="img/mark.svg" alt="" draggable="false">
+									</div>
+									<div class="illustrate__skills-info">
+										<div class="illustrate__skills-subtitle">
+											CSS
+										</div>
+										<div class="illustrate__skill-desctiption">
+											Средний
+										</div>
+									</div>
+								</div>
+								<div class="illustrate__skills-card">
+									<div class="illustrate__skills-mark">
+										<img src="img/cancel.svg" alt="" draggable="false">
+									</div>
+									<div class="illustrate__skills-info">
+										<div class="illustrate__skills-subtitle">
+											React
+										</div>
+										<div class="illustrate__skill-desctiption">
+											Низкий
+										</div>
+									</div>
+								</div>
+								<div class="illustrate__skills-card">
+									<div class="illustrate__skills-mark">
+										<img src="img/cancel.svg" alt="" draggable="false">
+									</div>
+									<div class="illustrate__skills-info">
+										<div class="illustrate__skills-subtitle">
+											JavaScript
+										</div>
+										<div class="illustrate__skill-desctiption">
+											Низкий
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+				©&ensp;<a href="https://vk.com/eroyu" target="_blank">Терсенев Владислав</a>&ensp;2022
+			</div>
+		</footer>
+	</div>
+	<script src="js/modal-img.js"></script>
+	<script src="js/switches.js"></script>
+	<script src="js/theme.js"></script>
+</body>
+</html>
