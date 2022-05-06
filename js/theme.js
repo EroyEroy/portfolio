@@ -1,7 +1,4 @@
 const themeSwitches = document.querySelectorAll('.header__button-theme');
-document.ondragstart = noselect;
-document.onselectstart = noselect;
-document.oncontextmenu = noselect;
 themeSwitches.forEach(swither => {
 	swither.addEventListener('click', function() {
 		applyTheme(this.dataset.theme);
