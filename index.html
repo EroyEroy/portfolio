@@ -7,6 +7,12 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" title="theme" href="#">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		document.ondragstart = noselect;
+		document.onselectstart = noselect;
+		document.oncontextmenu = noselect;
+		function noselect() {return false;}	
+	</script>
 	<title>Portfolio</title>
 </head>
 <body>
