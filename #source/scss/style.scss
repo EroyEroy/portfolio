@@ -97,7 +97,7 @@ html{
 }
 .flex-js-sb{
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
 	height: 100%;
 }
@@ -110,12 +110,77 @@ html{
 }
 // стилизация header
 .header{
+	position: relative;
 	width: 100%;
 	height: rem(70);
 	&__button-theme{
 		width: rem(30);
 		height: rem(30);
 		background: none;
+	}
+}
+// кнопка изменения языка
+.language__button{
+	background: #536DFE;
+	color: #fff;
+	font-size: em(14);
+	font-weight: 700;
+	padding: em(10) em(15);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: em(5);
+}
+.header__language_active{
+	.language__icon{
+		transform: rotate(180deg);
+	}
+	.language__overflow{
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
+}
+.language__text{
+	margin-right: em(10);
+}
+.header__language{
+	position: relative;
+}
+.language__overflow{
+	position: absolute;
+	box-shadow: 0px 2px 10px rgb(42, 115, 217, 20%);
+	border: 1px solid #536DFE;
+	background: #fff;
+	border-radius: em(5);
+	margin-top: em(10);
+	width: 100%;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+.language__list{
+	overflow: auto;
+}
+.language__title{
+	display: block;
+	white-space: nowrap;
+	position: relative;
+	padding: em(10);
+	border-bottom: 1px solid #536DFE;
+	transition: .3s ease-in-out;
+	&:last-child{
+		border-bottom: none;
+	}
+	a{
+		color: #536DFE;
+	}
+}
+.language__title:hover{
+	background: #536DFE;
+	transition: .3s ease-in-out;
+	a{
+		color: #fff;
 	}
 }
 // стилизация секции info
@@ -389,7 +454,7 @@ html{
 	border-radius: 30px;
 }
 .modalContent{
-	animation: zoom 0.6s;
+	animation: zoom .6s;
 }
 .modal-wrapper{
 	display: flex;
@@ -402,9 +467,8 @@ html{
 	color: #f1f1f1;
 	font-size: em(40);
 	font-weight: 600;
-	transition: .3s;
 	z-index: 2;
-	animation: zoom .8s;
+	animation: zoom .6s;
 }
 .close:hover, .close:focus{
 	color: #bbb;

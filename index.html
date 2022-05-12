@@ -20,6 +20,23 @@
 				<button data-theme="light" class="header__button-theme" type="button">
 					<img src="img/sun.svg" alt="">
 				</button>
+				<div class="header__language">
+					<button class="language__button" onclick="showDescription()">
+						<span class="language__text">Русский</span>
+						<img class="language__icon" src="img/arrow.svg" alt="" draggable="false">
+					</button>
+					<!-- список языков -->
+					<div class="language__overflow">
+						<ul class="language__list">
+							<li class="language__title">
+								<a href="#">English</a>
+							</li>
+							<li class="language__title">
+								<a href="#">Русский</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</header>
 		<main class="main">
@@ -213,5 +230,6 @@
 	<script src="js/modal-img.js"></script>
 	<script src="js/switches.js"></script>
 	<script src="js/theme.js"></script>
+	<script src="js/language.js"></script>
 </body>
 </html>
