@@ -121,6 +121,7 @@ html{
 }
 // кнопка изменения языка
 .language__button{
+	width: 100%;
 	background: #536DFE;
 	color: #fff;
 	font-size: em(14);
@@ -146,6 +147,8 @@ html{
 }
 .header__language{
 	position: relative;
+	width: 110px;
+	max-width: 100%;
 }
 .language__overflow{
 	position: absolute;
@@ -166,7 +169,7 @@ html{
 	display: block;
 	white-space: nowrap;
 	position: relative;
-	padding: em(10);
+	// padding: em(10);
 	border-bottom: 1px solid #536DFE;
 	transition: .3s ease-in-out;
 	&:last-child{
@@ -176,12 +179,21 @@ html{
 		color: #536DFE;
 	}
 }
-.language__title:hover{
+.btnlang{
+	width: 100%;
+	background: none;
+	color: #000;
+	text-align: left;
+	padding-left: 10px;
+	height: 35px;
+}
+.btnlang:hover{
 	background: #536DFE;
 	transition: .3s ease-in-out;
-	a{
-		color: #fff;
-	}
+	color: #fff;
+	// a{
+	// 	color: #fff;
+	// }
 }
 // стилизация секции info
 .info{

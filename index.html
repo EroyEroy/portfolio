@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<title>Portfolio</title>
 </head>
+
 <body>
 	<div class="wrapper">
 		<header class="header">
@@ -29,10 +31,10 @@
 					<div class="language__overflow">
 						<ul class="language__list">
 							<li class="language__title">
-								<a href="#">English</a>
+								<button value="English" class="btnlang" id="lang-en">English</button>
 							</li>
 							<li class="language__title">
-								<a href="#">Русский</a>
+								<button value="Русский" class="btnlang" id="lang-ru">Русский</button>
 							</li>
 						</ul>
 					</div>
@@ -52,10 +54,10 @@
 							<img class="modalContent" draggable="false" id="img01" alt="">
 						</div>
 					</div>
-					<h2 class="info__title">
+					<h2 class="info__title lng-h2">
 						Терсенев Владислав
 					</h2>
-					<p class="info__description">
+					<p class="info__description lng-description">
 						Web – разработчик
 					</p>
 					<div class="info__social">
@@ -68,7 +70,7 @@
 							<span class="card__number">
 								1
 							</span>
-							<div class="card__description">
+							<div class="card__description lng-cardOne">
 								годы
 								<br>
 								работы
@@ -78,7 +80,7 @@
 							<span class="card__number">
 								3
 							</span>
-							<div class="card__description">
+							<div class="card__description lng-cardTwo">
 								законченных
 								<br>
 								проектов
@@ -88,22 +90,22 @@
 							<span class="card__number">
 								1
 							</span>
-							<div class="card__description">
+							<div class="card__description lng-cardThree">
 								довольных
 								<br>
 								клиентов
 							</div>
 						</div>
 					</div>
-					<a href="file/cv.pdf" class="info__cv-button" download="cv">
+					<a href="file/cv.pdf" class="info__cv-button lng-btn" download="cv">
 						Скачать CV
 						<img src="img/arrow_down.svg" alt="" draggable="false">
 					</a>
 					<div class="info__switches">
-						<button class="info__portfolio-btn active" type="button">
+						<button class="info__portfolio-btn active lng-portfolio" type="button">
 							Портфолио
 						</button>
-						<button class="info__skills-btn" type="button">
+						<button class="info__skills-btn lng-skills" type="button">
 							Навыки
 						</button>
 					</div>
@@ -115,10 +117,10 @@
 						<div class="illustrate__portfolio-card">
 							<img src="img/baking-shop.jpg" alt="" draggable="false">
 							<div class="illustrate__card-info">
-								<div class="illustrate__card-title">
+								<div class="illustrate__card-title lng-baking">
 									Магазин выпечки
 								</div>
-								<a href="https://eroyeroy.github.io/baking-shop/" target="_blank">
+								<a class="lng-view" href="https://eroyeroy.github.io/baking-shop/" target="_blank">
 									Смотреть
 								</a>
 							</div>
@@ -126,10 +128,10 @@
 						<div class="illustrate__portfolio-card">
 							<img src="img/roll-shop.jpg" alt="" draggable="false">
 							<div class="illustrate__card-info">
-								<div class="illustrate__card-title">
+								<div class="illustrate__card-title lng-sushi">
 									Суши бар
 								</div>
-								<a href="https://eroyeroy.github.io/roll-shop/" target="_blank">
+								<a class="lng-view2" href="https://eroyeroy.github.io/roll-shop/" target="_blank">
 									Смотреть
 								</a>
 							</div>
@@ -137,10 +139,10 @@
 						<div class="illustrate__portfolio-card">
 							<img src="img/validate-form.jpg" alt="" draggable="false">
 							<div class="illustrate__card-info">
-								<div class="illustrate__card-title">
+								<div class="illustrate__card-title lng-validate">
 									Валидация формы
 								</div>
-								<a href="https://eroyeroy.github.io/validate-form-js/" target="_blank">
+								<a class="lng-view3" href="https://eroyeroy.github.io/validate-form-js/" target="_blank">
 									Смотреть
 								</a>
 							</div>
@@ -148,17 +150,17 @@
 						<div class="illustrate__portfolio-card">
 							<img src="img/taskdly.jpg" alt="" draggable="false">
 							<div class="illustrate__card-info">
-								<div class="illustrate__card-title">
+								<div class="illustrate__card-title lng-task">
 									Планировщик задач
 								</div>
-								<a href="https://github.com/EroyEroy/taskdly" target="_blank">
+								<a class="lng-view4" href="https://github.com/EroyEroy/taskdly" target="_blank">
 									Смотреть
 								</a>
 							</div>
 						</div>
 					</div>
 					<div class="illustrate__skills">
-						<h2 class="illustrate__skills-title">
+						<h2 class="illustrate__skills-title lng-skillsTitle">
 							Frontend – разработчик
 						</h2>
 						<div class="illustrate__skills-cards">
@@ -171,7 +173,7 @@
 										<div class="illustrate__skills-subtitle">
 											HTML
 										</div>
-										<div class="illustrate__skill-desctiption">
+										<div class="illustrate__skill-desctiption lng-lvlMid">
 											Средний
 										</div>
 									</div>
@@ -184,7 +186,7 @@
 										<div class="illustrate__skills-subtitle">
 											CSS
 										</div>
-										<div class="illustrate__skill-desctiption">
+										<div class="illustrate__skill-desctiption lng-lvlMid2">
 											Средний
 										</div>
 									</div>
@@ -197,7 +199,7 @@
 										<div class="illustrate__skills-subtitle">
 											React
 										</div>
-										<div class="illustrate__skill-desctiption">
+										<div class="illustrate__skill-desctiption lng-lvlLow">
 											Низкий
 										</div>
 									</div>
@@ -210,7 +212,7 @@
 										<div class="illustrate__skills-subtitle">
 											JavaScript
 										</div>
-										<div class="illustrate__skill-desctiption">
+										<div class="illustrate__skill-desctiption lng-lvlLow2">
 											Низкий
 										</div>
 									</div>
@@ -223,7 +225,7 @@
 		</main>
 		<footer class="footer">
 			<div class="container" style="display: flex; justify-content: center; align-items: center; height: 100%;">
-				©&ensp;<a href="https://vk.com/eroyu" target="_blank">Терсенев Владислав</a>&ensp;2022
+				©&ensp;<a class="lng-footer" href="https://vk.com/eroyu" target="_blank">Терсенев Владислав</a>&ensp;2022
 			</div>
 		</footer>
 	</div>
@@ -232,4 +234,5 @@
 	<script src="js/theme.js"></script>
 	<script src="js/language.js"></script>
 </body>
+
 </html>

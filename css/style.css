@@ -169,6 +169,7 @@ html {
 }
 
 .language__button {
+  width: 100%;
   background: #536DFE;
   color: #fff;
   font-size: 0.875em;
@@ -202,6 +203,8 @@ html {
 
 .header__language {
   position: relative;
+  width: 110px;
+  max-width: 100%;
 }
 
 .language__overflow {
@@ -226,7 +229,6 @@ html {
   display: block;
   white-space: nowrap;
   position: relative;
-  padding: 0.625em;
   border-bottom: 1px solid #536DFE;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
@@ -238,12 +240,19 @@ html {
   color: #536DFE;
 }
 
-.language__title:hover {
+.btnlang {
+  width: 100%;
+  background: none;
+  color: #000;
+  text-align: left;
+  padding-left: 10px;
+  height: 35px;
+}
+
+.btnlang:hover {
   background: #536DFE;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-}
-.language__title:hover a {
   color: #fff;
 }
 
