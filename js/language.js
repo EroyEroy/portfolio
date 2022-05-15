@@ -67,6 +67,10 @@ const langArr = {
 		English: 'View',
 		Русский: 'Смотреть',
 	},
+	view5: {
+		English: 'View',
+		Русский: 'Смотреть',
+	},
 	sushi: {
 		English: 'Sushi bar',
 		Русский: 'Суши бар',
@@ -102,6 +106,10 @@ const langArr = {
 	footer: {
 		English: 'Tersenev Vladislav',
 		Русский: 'Терсенев Владислав',
+	},
+	car: {
+		English: 'Car shop',
+		Русский: 'Магазин авто',
 	},
   };
   let btn = document.querySelectorAll('.btnlang');
