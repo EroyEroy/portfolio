@@ -71,6 +71,10 @@ const langArr = {
 		English: 'View',
 		Русский: 'Смотреть',
 	},
+	view6: {
+		English: 'View',
+		Русский: 'Смотреть',
+	},
 	sushi: {
 		English: 'Sushi bar',
 		Русский: 'Суши бар',
@@ -82,6 +86,10 @@ const langArr = {
 	task: {
 		English: 'Task planner',
 		Русский: 'Планировщик задач',
+	},
+	productly: {
+		English: 'Marketing agency',
+		Русский: 'Агенство маркетинга',
 	},
 	lvlMid: {
 		English: 'Mid',
