@@ -75,9 +75,17 @@ const langArr = {
 		English: 'View',
 		Русский: 'Смотреть',
 	},
+	view7: {
+		English: 'View',
+		Русский: 'Смотреть',
+	},
 	sushi: {
 		English: 'Sushi bar',
 		Русский: 'Суши бар',
+	},
+	himo: {
+		English: 'Electric bike',
+		Русский: 'Электровелосипед',
 	},
 	validate: {
 		English: 'Form validation',
