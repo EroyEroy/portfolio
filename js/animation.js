@@ -8,7 +8,7 @@ if (animItems.length > 0) {
 			const animItem = animItems[i];
 			const animItemHeight = animItem.offsetHeight;
 			const animeItemOffset = offset(animItem).top;
-			const animStart = 100;
+			const animStart = 10;
 
 			// настройка
 			let animItemPoint = window.innerHeight - animItemHeight / animStart;
