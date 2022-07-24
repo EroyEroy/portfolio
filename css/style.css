@@ -459,7 +459,7 @@ html {
           flex-direction: column;
   border-radius: inherit;
   padding: 20px;
-  background-color: #00000099;
+  background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
   visibility: hidden;
@@ -625,6 +625,20 @@ html {
   cursor: pointer;
 }
 
+.animate {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.animate.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
 @-webkit-keyframes zoom {
   from {
     -webkit-transform: scale(0);
@@ -653,32 +667,32 @@ html {
 }
 @media (max-width: 1920px) {
   .info__avatar-logo {
-    width: calc(150px + (200 - 150) * ((100vw - 320px) / (1920 - 320)));
-    height: calc(150px + (200 - 150) * ((100vw - 320px) / (1920 - 320)));
+    width: calc(150px + 50 * (100vw - 320px) / 1600);
+    height: calc(150px + 50 * (100vw - 320px) / 1600);
   }
 
   .info__title {
-    font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(20px + 10 * (100vw - 320px) / 1600);
   }
 
   .info__description {
-    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(16px + 4 * (100vw - 320px) / 1600);
   }
 
   .card .card__description {
-    font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   }
 
   .info__switches button {
-    font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(15px + 5 * (100vw - 320px) / 1600);
   }
 
   .illustrate__skills-subtitle {
-    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(16px + 4 * (100vw - 320px) / 1600);
   }
 
   .illustrate__skills-title {
-    font-size: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(20px + 5 * (100vw - 320px) / 1600);
   }
 }
 @media (max-width: 479px) {

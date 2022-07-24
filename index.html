@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" title="theme" href="#">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<title>Portfolio</title>
+	<title>Tersenev Vladislav Portfolio</title>
 </head>
 
 <body>
@@ -44,7 +44,7 @@
 		<main class="main">
 			<section class="info">
 				<div class="container-two flex-js-c">
-					<img class="info__avatar-logo" id="myImg" src="img/avatar.jpg" alt="" draggable="false">
+					<img class="info__avatar-logo animate" id="myImg" src="img/avatar.webp" alt="" draggable="false">
 					<!-- модальное окно -->
 					<div id="myModal" class="modal">
 						<div class="modal-wrapper">
@@ -54,18 +54,18 @@
 							<img class="modalContent" draggable="false" id="img01" alt="">
 						</div>
 					</div>
-					<h2 class="info__title lng-h2">
+					<h2 class="info__title lng-h2 animate">
 						Терсенев Владислав
 					</h2>
-					<p class="info__description lng-description">
+					<p class="info__description lng-description animate">
 						Web – разработчик
 					</p>
 					<div class="info__social">
-						<a href="https://t.me/EroyEroy" target="_blank"><img src="img/telegram.svg" alt=""></a>
-						<a href="https://vk.com/eroyu" target="_blank"><img src="img/vk.svg" alt=""></a>
-						<a href="https://github.com/EroyEroy" target="_blank"><img src="img/github.svg" alt=""></a>
+						<a class="animate" href="https://t.me/EroyEroy" target="_blank"><img src="img/telegram.svg" alt=""></a>
+						<a class="animate" href="https://vk.com/eroyu" target="_blank"><img src="img/vk.svg" alt=""></a>
+						<a class="animate" href="https://github.com/EroyEroy" target="_blank"><img src="img/github.svg" alt=""></a>
 					</div>
-					<div class="info__cards">
+					<!-- <div class="info__cards">
 						<div class="card">
 							<span class="card__number">
 								1
@@ -96,12 +96,12 @@
 								клиентов
 							</div>
 						</div>
-					</div>
-					<a href="file/cv.pdf" class="info__cv-button lng-btn" download="cv">
+					</div> -->
+					<!-- <a href="file/cv.pdf" class="info__cv-button lng-btn" download="cv">
 						Скачать CV
 						<img src="img/arrow_down.svg" alt="" draggable="false">
-					</a>
-					<div class="info__switches">
+					</a> -->
+					<div class="info__switches animate">
 						<button class="info__portfolio-btn active lng-portfolio" type="button">
 							Портфолио
 						</button>
@@ -114,8 +114,8 @@
 			<section class="illustrate">
 				<div class="container">
 					<div class="illustrate__portfolio-cards active">
-						<div class="illustrate__portfolio-card">
-							<img src="img/baking-shop.jpg" alt="" draggable="false">
+						<div class="illustrate__portfolio-card animate">
+							<img src="img/baking-shop.webp" alt="" draggable="false">
 							<div class="illustrate__card-info">
 								<div class="illustrate__card-title lng-baking">
 									Магазин выпечки
@@ -125,8 +125,8 @@
 								</a>
 							</div>
 						</div>
-						<div class="illustrate__portfolio-card">
-							<img src="img/roll-shop.jpg" alt="" draggable="false">
+						<div class="illustrate__portfolio-card animate">
+							<img src="img/roll-shop.webp" alt="" draggable="false">
 							<div class="illustrate__card-info">
 								<div class="illustrate__card-title lng-sushi">
 									Суши бар
@@ -136,7 +136,7 @@
 								</a>
 							</div>
 						</div>
-						<div class="illustrate__portfolio-card">
+						<!-- <div class="illustrate__portfolio-card animate">
 							<img src="img/validate-form.jpg" alt="" draggable="false">
 							<div class="illustrate__card-info">
 								<div class="illustrate__card-title lng-validate">
@@ -146,8 +146,8 @@
 									Смотреть
 								</a>
 							</div>
-						</div>
-						<div class="illustrate__portfolio-card">
+						</div> -->
+						<!-- <div class="illustrate__portfolio-card animate">
 							<img src="img/taskdly.jpg" alt="" draggable="false">
 							<div class="illustrate__card-info">
 								<div class="illustrate__card-title lng-task">
@@ -157,9 +157,9 @@
 									Смотреть
 								</a>
 							</div>
-						</div>
-						<div class="illustrate__portfolio-card">
-							<img src="img/car-usa.jpg" alt="" draggable="false">
+						</div> -->
+						<div class="illustrate__portfolio-card animate">
+							<img src="img/car-usa.webp" alt="" draggable="false">
 							<div class="illustrate__card-info">
 								<div class="illustrate__card-title lng-car">
 									Магазин авто
@@ -169,8 +169,8 @@
 								</a>
 							</div>
 						</div>
-						<div class="illustrate__portfolio-card">
-							<img src="img/productly.jpg" alt="" draggable="false">
+						<div class="illustrate__portfolio-card animate">
+							<img src="img/productly.webp" alt="" draggable="false">
 							<div class="illustrate__card-info">
 								<div class="illustrate__card-title lng-productly">
 									Агентсво маркетинга
@@ -180,8 +180,8 @@
 								</a>
 							</div>
 						</div>
-						<div class="illustrate__portfolio-card">
-							<img src="img/himo.jpg" alt="" draggable="false">
+						<div class="illustrate__portfolio-card animate">
+							<img src="img/himo.webp" alt="" draggable="false">
 							<div class="illustrate__card-info">
 								<div class="illustrate__card-title lng-himo">
 									Электровелосипед
@@ -266,6 +266,7 @@
 	<script src="js/switches.js"></script>
 	<script src="js/theme.js"></script>
 	<script src="js/language.js"></script>
+	<script src="js/animation.js"></script>
 </body>
 
 </html>
