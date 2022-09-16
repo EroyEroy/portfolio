@@ -1,15 +1,53 @@
-function autoDate() {
-	const startDate = new Date('2022-09-09')  //устанавливаем дату начала интервала 
-	const now = new Date() //определяем текущую дату
-	const delta = Math.trunc((+now - +startDate) / 3 / 24 / 3600 / 1000); // вычисляем количество трёхдневных интервалов которые прошли с момента startDate
+window.addEventListener('load', () => {
+	const time = document.querySelector(".dateYear");
 
-	const resDate = startDate
-	resDate.setDate(resDate.getDate() + delta * 3)
-	//итоговая дата -- это стартовая дата + количево вычислиных трёхдневных интервалов, вычисленных на предыдущем шаге, умноженые на 3
+	mydate = new Date();
+	myday = mydate.getDay();
+	mymonth = mydate.getMonth();
+	myweekday = mydate.getDate();
+	weekday = myweekday;
+	myyear = mydate.getYear();
+	year = myyear
 
-	const dateTag = document.querySelector('.dateYear') //находим тег, в котором должна оказаться новая дата
-	dateTag.textContent = resDate.toLocaleString('ru', { day: 'numeric', month: 'long', year: 'numeric' })
-	//устанавливаем дату в соответствии с форматом DD MMMM (можете подобрать любой другой) 
-};
-autoDate();
-setInterval(autoDate, 10 * 60 * 1000) //затем обновляем данные каждые 10 минут
+	if (year < 2000)
+		year = year + 1900;
+	if (myday == 0)
+		day = " Воскресенье, "
+	else if (myday == 1)
+		day = " Понедельник, "
+	else if (myday == 2)
+		day = " Вторник, "
+	else if (myday == 3)
+		day = " Среда, "
+	else if (myday == 4)
+		day = " Четверг, "
+	else if (myday == 5)
+		day = " Пятница, "
+	else if (myday == 6)
+		day = " Суббота, "
+	if (mymonth == 0)
+		month = "Января "
+	else if (mymonth == 1)
+		month = "Февраля "
+	else if (mymonth == 2)
+		month = "Марта "
+	else if (mymonth == 3)
+		month = "Апреля "
+	else if (mymonth == 4)
+		month = "Мая "
+	else if (mymonth == 5)
+		month = "Июня "
+	else if (mymonth == 6)
+		month = "Июля "
+	else if (mymonth == 7)
+		month = "Августа "
+	else if (mymonth == 8)
+		month = "Сентября "
+	else if (mymonth == 9)
+		month = "октября "
+	else if (mymonth == 10)
+		month = "Ноября "
+	else if (mymonth == 11)
+		month = "Декабря"
+	time.innerHTML = '<span class="dateYear">' + myweekday + ' ' + month + year + '</span>';
+});
