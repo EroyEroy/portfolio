@@ -7,6 +7,7 @@ body{
 	background-color: $body-background;
 	color: #fff;
 	font-weight: 300;
+	overflow-x: hidden;
 }
 // настройка для прижатия footer к низу страницы
 .wrapper{
@@ -257,6 +258,9 @@ html{
 	top: 50%;
 	left: 33px;
 	overflow-y: auto;
+	&::-webkit-scrollbar{
+		display: none;
+	}
 }
 ::-webkit-scrollbar{
 	width: 5px;
@@ -453,7 +457,8 @@ html{
 	align-self: flex-end;
 	margin-left: 10px;
 }
-.closePopup{
+.closePopup,
+.closeBurger{
 	margin: 0 auto;
 	display: block;
 	width: 38px;
@@ -463,6 +468,65 @@ html{
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+}
+.closeBurger{
+	margin-right: 0;
+}
+.burger-btn{
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: none;
+	color: #fff;
+	font-size: 20px;
+	svg{
+		width: 40px;
+		height: 40px;
+	}
+}
+.burger-menu{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 90%;
+	height: 100%;
+	background: #111111;
+	z-index: 999;
+	padding: 20px;
+	transition: .3s;
+	transform: translate3d(100%,0,0);
+}
+.burger__list{
+	margin-top: 50px;
+}
+.burger__item + .burger__item{
+	margin-top: 50px;
+}
+.burger__item{
+	text-align: right;
+	border-right: 4px solid #fff;
+	padding-right: 20px;
+	transition: .3s;
+	&:hover{
+		border-right: 4px solid #536dfe;
+		span{
+			color: #536dfe;
+		}
+	}
+	button{
+		color: #fff;
+		background: none;
+		text-align: right;
+		font-size: 20px;
+		span{
+			display: block;
+			font-size: 40px;
+		}
+	}
+}
+.burger-menu.active{
+	transform: translate3d(0,0,0);
 }
 @keyframes soaring {
 	50%{
@@ -488,4 +552,93 @@ html{
 	  transform: rotate(360deg);
 	}
 }
-  
+@media (max-width: 992px) {
+	.closePopup{
+		margin-bottom: 50px;
+	}
+	.popup__content{
+		padding: 20px;
+	}
+	.header__nav-left,
+	.header__nav-right{
+		display: none;
+	}
+	.post-news{
+		flex: 0 0 100%;
+	}
+	.post-news:nth-child(even) .post-media{
+		transform: translate(0,0);
+	}
+	.post-news:nth-child(3n+1) .post-media{
+		transform: translate(0,0);
+	}
+	.post-news:nth-child(3n) .post-media{
+		transform: translate(0,0);
+	}
+	.post-news:nth-child(3n-1) .post-media{
+		transform: translate(0,0);
+	}
+	.burger-btn{
+		display: block;
+	}
+	.post-media-overlay h2 {
+		padding: 0 0 50px 50px;
+	}
+}
+@media (max-width: 700px) {
+	.list__item{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.list__text{
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 520px) {
+	.post-media-overlay h2 {
+		padding: 0 0 30px 30px;
+		font-size: 16px;
+	}
+}
+@media (max-width: 479px) {
+	.closePopup,
+	.closeBurger,
+	.burger-btn svg{
+		width: 30px;
+		height: 30px;
+	}
+	.homepage__human{
+		margin: 20px 0;
+	}
+	.title{
+		font-size: 20px;
+	}
+	.post-media-overlay h2 {
+		padding: 20px;
+	}
+	.burger__item button span {
+		font-size: 30px;
+	}
+	.list__text{
+		font-size: 25px;
+	}
+	.list__number{
+		font-size: 16px;
+	}
+	.list__rating img{
+		width: 30px;
+		height: 30px;
+	}
+}
+@media (max-width: 380px) {
+	.list__rating img{
+		width: 20px;
+		height: 20px;
+	}
+}
+@media (max-width: 360px) {
+	.post-media-overlay h2 {
+		font-size: 12px;
+		padding: 20px;
+	}
+}

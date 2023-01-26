@@ -4,7 +4,9 @@ const block1 = document.querySelector('.header__nav-left'),
     buttonsPopup = document.querySelectorAll('.target-menu'),
     about = document.getElementById('about'),
     skills = document.getElementById('skills'),
-    portfolio = document.getElementById('portfolio');
+    portfolio = document.getElementById('portfolio'),
+    burgerBtn = document.querySelector('.burger-btn'),
+    closeBtnBurger = document.querySelector('.closeBurger');
 let activePositionY = 0,
     activeTarget,
     count = 0,
@@ -225,7 +227,22 @@ buttonsPopup.forEach(el => {
         activeTarget = el;
     });
 });
+burgerBtn.addEventListener('click', () => {
+    openBurger();
+});
+closeBtnBurger.addEventListener('click', () => {
+    closeBurger();
+});
+function openBurger() {
+    document.querySelector('.burger-menu').classList.add('active');
+};
+function closeBurger() {
+    document.querySelector('.burger-menu').classList.remove('active');
+};
 function resize(el) {
+    if (document.querySelector('.burger-menu').classList.contains('active')) {
+        document.querySelector('.burger-menu').classList.remove('active');
+    }
     buttonsPopup.forEach(el => {
         el.disabled = true;
     });
@@ -249,6 +266,9 @@ function resize(el) {
     });
 }
 function removeSize() {
+    if (document.querySelector('.burger-menu').classList.contains('active')) {
+        document.querySelector('.burger-menu').classList.remove('active');
+    }
     div.querySelector('.popup__content').style.opacity = '0';
     div.querySelector('.popup__content').style.transform = 'translate3d(0,30%,0)';
     setTimeout(() => {
