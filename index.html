@@ -5,274 +5,88 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link type="image/x-icon" href="img/favicon-32x32.png" rel="shortcut icon">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" title="theme" href="#">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<title>Tersenev Vladislav Portfolio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title></title>
 </head>
 
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="container flex-js-sb">
-				<button data-theme="dark" class="header__button-theme" type="button">
-					<img src="img/moon.svg" alt="">
-				</button>
-				<button data-theme="light" class="header__button-theme" type="button">
-					<img src="img/sun.svg" alt="">
-				</button>
-				<!-- <div class="header__language">
-					<button class="language__button" onclick="showDescription()">
-						<span class="language__text">Русский</span>
-						<img class="language__icon" src="img/arrow.svg" alt="" draggable="false">
-					</button>
-					<div class="language__overflow">
-						<ul class="language__list">
-							<li class="language__title">
-								<button value="English" class="btnlang" id="lang-en">English</button>
-							</li>
-							<li class="language__title">
-								<button value="Русский" class="btnlang" id="lang-ru">Русский</button>
-							</li>
-						</ul>
-					</div>
-				</div> -->
-			</div>
+			<nav class="header__nav-left">
+				<div class="header__nav-inner">
+					<ul class="header__nav-list">
+						<!-- <li class="header__nav-item">
+							<button class="target-menu" id="about" type="button" data-content="about">01<span>Обо мне</span></button>
+						</li> -->
+						<li class="header__nav-item">
+							<button class="target-menu" id="skills" type="button" data-content="skills">01<span>Навыки</span></button>
+						</li>
+						<li class="header__nav-item">
+							<button class="target-menu" id="portfolio" type="button" data-content="portfolio">02<span>Портфолио</span></button>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<nav class="header__nav-right">
+				<div class="header__nav-inner">
+					<!-- <ul class="header__nav-list">
+
+					</ul> -->
+				</div>
+			</nav>
 		</header>
 		<main class="main">
-			<section class="info">
-				<div class="container-two flex-js-c">
-					<img class="info__avatar-logo animate" id="myImg" src="img/avatar.webp" alt="" draggable="false">
-					<!-- модальное окно -->
-					<div id="myModal" class="modal">
-						<div class="modal-wrapper">
-							<span class="close">
-								&times;
-							</span>
-							<img class="modalContent" draggable="false" id="img01" alt="">
-						</div>
-					</div>
-					<h2 class="info__title lng-h2 animate">
-						Терсенев Владислав
-					</h2>
-					<p class="info__description lng-description animate">
-						Web – разработчик
-					</p>
-					<div class="info__social">
-						<a class="animate" href="https://t.me/EroyEroy" target="_blank"><img src="img/telegram.svg"
-								alt=""></a>
-						<a class="animate" href="https://vk.com/eroyu" target="_blank"><img src="img/vk.svg" alt=""></a>
-						<a class="animate" href="https://github.com/EroyEroy" target="_blank"><img src="img/github.svg"
-								alt=""></a>
-					</div>
-					<!-- <div class="info__cards">
-						<div class="card">
-							<span class="card__number">
-								1
-							</span>
-							<div class="card__description lng-cardOne">
-								годы
-								<br>
-								работы
-							</div>
-						</div>
-						<div class="card">
-							<span class="card__number">
-								3
-							</span>
-							<div class="card__description lng-cardTwo">
-								законченных
-								<br>
-								проектов
-							</div>
-						</div>
-						<div class="card">
-							<span class="card__number">
-								1
-							</span>
-							<div class="card__description lng-cardThree">
-								довольных
-								<br>
-								клиентов
-							</div>
-						</div>
-					</div> -->
-					<!-- <a href="file/cv.pdf" class="info__cv-button lng-btn" download="cv">
-						Скачать CV
-						<img src="img/arrow_down.svg" alt="" draggable="false">
-					</a> -->
-					<div class="info__switches animate">
-						<button class="info__portfolio-btn active lng-portfolio" type="button">
-							Портфолио
-						</button>
-						<button class="info__skills-btn lng-skills" type="button">
-							Навыки
-						</button>
-					</div>
-				</div>
-			</section>
-			<section class="illustrate">
+			<section class="homepage">
 				<div class="container">
-					<div class="illustrate__portfolio-cards active">
-						<div class="illustrate__portfolio-card animate">
-							<img src="img/Roongo.webp" alt="" draggable="false">
-							<div class="illustrate__card-info">
-								<div class="illustrate__card-title lng-Roongo">
-									Roongo
-								</div>
-								<a class="lng-view7" href="https://eroyeroy.github.io/Roongo/" target="_blank">
-									Смотреть
-								</a>
-							</div>
+					<div class="homepage__inner">
+						<svg class="logo" width="100" height="117" viewBox="0 0 100 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="path1" d="M14.7616 9.61063L14.7618 9.61001C15.9708 6.54378 16.8204 4.39936 17.6095 3.00286C18.4355 1.541 18.8648 1.5 19 1.5C19.1352 1.5 19.5645 1.541 20.3905 3.00286C21.1796 4.39936 22.0292 6.54378 23.2382 9.61001L23.2384 9.61063L23.4916 10.2519C23.5192 10.3218 23.5464 10.3912 23.5735 10.4601C23.9663 11.4598 24.3139 12.3447 24.9837 13.015L24.9851 13.0164C25.6575 13.6876 26.5427 14.035 27.5475 14.4294C27.6139 14.4555 27.6808 14.4818 27.7482 14.5083C27.7484 14.5084 27.7486 14.5085 27.7487 14.5086L28.389 14.7613L28.3894 14.7614C31.4561 15.9708 33.6006 16.8204 34.9972 17.6094C36.459 18.4353 36.5 18.8645 36.5 19C36.5 19.1355 36.459 19.5647 34.9972 20.3906C33.6006 21.1796 31.4561 22.0292 28.3894 23.2386L28.389 23.2387L27.7487 23.4914C27.7486 23.4915 27.7484 23.4916 27.7482 23.4917C27.6808 23.5182 27.6139 23.5445 27.5474 23.5706C26.5427 23.965 25.6575 24.3124 24.9851 24.9836L24.9837 24.985C24.3139 25.6553 23.9663 26.5402 23.5735 27.5399C23.5465 27.6088 23.5192 27.6782 23.4916 27.7481C23.4916 27.7481 23.4916 27.7481 23.4916 27.7481L23.2384 28.3894L23.2382 28.39C22.0292 31.4562 21.1796 33.6006 20.3905 34.9971C19.5645 36.459 19.1352 36.5 19 36.5C18.8648 36.5 18.4355 36.459 17.6095 34.9971C16.8204 33.6006 15.9708 31.4562 14.7618 28.39L14.7616 28.3894L14.5084 27.7481C14.5084 27.7481 14.5084 27.7481 14.5084 27.7481C14.4808 27.6782 14.4535 27.6088 14.4265 27.5399C14.0337 26.5402 13.6861 25.6553 13.0163 24.985L13.0149 24.9836C12.3425 24.3124 11.4573 23.965 10.4525 23.5706C10.3861 23.5445 10.3192 23.5182 10.2518 23.4917C10.2516 23.4916 10.2514 23.4915 10.2513 23.4914L9.61102 23.2387L9.61058 23.2386C6.54387 22.0292 4.39936 21.1796 3.00278 20.3906C1.541 19.5647 1.5 19.1355 1.5 19C1.5 18.8645 1.541 18.4353 3.00278 17.6094C4.39936 16.8204 6.54387 15.9708 9.61058 14.7614L9.61102 14.7613L10.2513 14.5086C10.2514 14.5085 10.2516 14.5084 10.2518 14.5083C10.3192 14.4818 10.3861 14.4555 10.4525 14.4294C11.4573 14.035 12.3425 13.6876 13.0149 13.0164L13.0163 13.015C13.6861 12.3447 14.0337 11.4598 14.4265 10.4601C14.4535 10.3912 14.4808 10.3218 14.5084 10.2519L14.7616 9.61063Z" fill="white" stroke="#536DFE" stroke-width="3" />
+							<path class="path2" d="M20.7614 88.6115L20.7618 88.6104C21.9708 85.5439 22.8204 83.3993 23.6095 82.0028C24.4355 80.541 24.8647 80.5 25 80.5C25.1353 80.5 25.5645 80.541 26.3905 82.0028C27.1795 83.3993 28.0292 85.5439 29.2381 88.6104L29.2386 88.6115L29.4915 89.2516C29.4915 89.2518 29.4916 89.252 29.4917 89.2522C29.5188 89.3208 29.5455 89.3888 29.572 89.4563C29.9658 90.459 30.313 91.343 30.9826 92.0145L30.9855 92.0173C31.657 92.687 32.541 93.0342 33.5436 93.428C33.6111 93.4545 33.6792 93.4812 33.7478 93.5083C33.748 93.5084 33.7482 93.5084 33.7484 93.5085L34.3885 93.7614L34.3895 93.7618C37.4561 94.9708 39.6007 95.8204 40.9972 96.6095C42.459 97.4355 42.5 97.8647 42.5 98C42.5 98.1352 42.459 98.5645 40.9972 99.3905C39.6007 100.18 37.4561 101.029 34.3895 102.238L34.3885 102.239L33.7484 102.491C33.7484 102.491 33.7483 102.491 33.7483 102.491C33.7481 102.492 33.7479 102.492 33.7478 102.492C33.6792 102.519 33.6111 102.546 33.5436 102.572C32.541 102.966 31.657 103.313 30.9855 103.983L30.9826 103.986C30.313 104.657 29.9658 105.541 29.572 106.544C29.5455 106.611 29.5188 106.679 29.4917 106.748C29.4916 106.748 29.4915 106.748 29.4915 106.748L29.2386 107.389L29.2381 107.39C28.0292 110.456 27.1795 112.601 26.3905 113.997C25.5645 115.459 25.1352 115.5 25 115.5C24.8647 115.5 24.4355 115.459 23.6095 113.997C22.8204 112.601 21.9708 110.456 20.7618 107.39L20.7614 107.389L20.5085 106.748C20.5085 106.748 20.5085 106.748 20.5085 106.748C20.5084 106.748 20.5084 106.748 20.5083 106.748C20.4812 106.679 20.4545 106.611 20.428 106.544C20.0342 105.541 19.687 104.657 19.0173 103.986L19.0145 103.983C18.343 103.313 17.459 102.966 16.4564 102.572C16.3889 102.546 16.3208 102.519 16.2522 102.492C16.252 102.492 16.2518 102.492 16.2516 102.491L15.6115 102.239L15.6104 102.238C12.5439 101.029 10.3993 100.18 9.00282 99.3905C7.54099 98.5645 7.5 98.1353 7.5 98C7.5 97.8647 7.54099 97.4355 9.00282 96.6095C10.3993 95.8204 12.5439 94.9708 15.6104 93.7618L15.6115 93.7614L16.2516 93.5085C16.2518 93.5085 16.2519 93.5084 16.2521 93.5083C16.2521 93.5083 16.2522 93.5083 16.2522 93.5083C16.3208 93.4812 16.3888 93.4545 16.4564 93.428C17.459 93.0342 18.343 92.687 19.0145 92.0173L19.0173 92.0145C19.687 91.343 20.0342 90.459 20.428 89.4564C20.4545 89.3888 20.4812 89.3208 20.5083 89.2522C20.5083 89.2522 20.5083 89.2521 20.5083 89.2521C20.5084 89.2519 20.5085 89.2518 20.5085 89.2516L20.7614 88.6115Z" fill="white" stroke="#637BFF" stroke-width="3" />
+							<path class="path3" d="M52.4096 40.2776L52.4103 40.2759C54.8534 34.0787 56.5908 29.6899 58.2127 26.8193C59.8962 23.8398 60.9041 23.5 61.5 23.5C62.0959 23.5 63.1038 23.8398 64.7872 26.8193C66.4092 29.6899 68.1466 34.0787 70.5897 40.2759L70.5904 40.2776L71.1029 41.575C71.1533 41.7027 71.203 41.8289 71.2521 41.9538C72.0667 44.0254 72.7302 45.7124 74.0047 46.9905L74.0095 46.9953C75.2875 48.2698 76.9746 48.9332 79.0462 49.7479C79.1707 49.7969 79.2966 49.8464 79.4239 49.8966C79.4243 49.8968 79.4246 49.8969 79.425 49.897L80.7223 50.4096L80.724 50.4103C86.9213 52.8534 91.3101 54.5908 94.1807 56.2127C97.1602 57.8962 97.5 58.9041 97.5 59.5C97.5 60.0959 97.1602 61.1038 94.1807 62.7872C91.3101 64.4092 86.9213 66.1466 80.724 68.5897L80.7223 68.5904L79.425 69.1029C79.2973 69.1533 79.171 69.203 79.0461 69.2521C76.9745 70.0668 75.2875 70.7302 74.0095 72.0047L74.0047 72.0095C72.7302 73.2875 72.0667 74.9746 71.2521 77.0462C71.203 77.171 71.1533 77.2973 71.1029 77.425L70.5904 78.7223L70.5897 78.724C68.1466 84.9213 66.4092 89.3101 64.7872 92.1807C63.1038 95.1602 62.0959 95.5 61.5 95.5C60.9041 95.5 59.8962 95.1602 58.2127 92.1807C56.5908 89.3101 54.8534 84.9213 52.4103 78.724L52.4096 78.7223L51.897 77.425C51.8969 77.4246 51.8968 77.4243 51.8966 77.4239C51.8464 77.2966 51.7969 77.1707 51.7479 77.0462C50.9332 74.9746 50.2698 73.2875 48.9953 72.0095L48.9904 72.0047C47.7125 70.7302 46.0255 70.0668 43.9539 69.2521C43.829 69.203 43.7027 69.1533 43.575 69.1029L42.2776 68.5904L42.2759 68.5897C36.0787 66.1466 31.6899 64.4092 28.8193 62.7872C25.8398 61.1038 25.5 60.0959 25.5 59.5C25.5 58.9041 25.8398 57.8962 28.8193 56.2127C31.6899 54.5908 36.0787 52.8534 42.2759 50.4103L42.2776 50.4096L43.575 49.897C43.5754 49.8969 43.5757 49.8968 43.576 49.8966C43.7033 49.8464 43.8292 49.7969 43.9537 49.7479C46.0254 48.9332 47.7124 48.2698 48.9905 46.9953L48.9953 46.9904C50.2698 45.7124 50.9332 44.0254 51.7479 41.9537C51.7969 41.8292 51.8464 41.7033 51.8966 41.576C51.8968 41.5757 51.8969 41.5754 51.897 41.575L52.4096 40.2776Z" fill="white" stroke="#637BFF" stroke-width="5" />
+						</svg>
+						<div class="homepage__human">
+							<img class="homepage__human-img" src="img/human.jpeg" alt="human">
 						</div>
-						<div class="illustrate__portfolio-card animate">
-							<img src="img/Nirvana.png" alt="" draggable="false">
-							<div class="illustrate__card-info">
-								<div class="illustrate__card-title lng-Converse">
-									NIRVANA promo
-								</div>
-								<a class="lng-view7" href="https://eroyeroy.github.io/nirvana-music-player/"
-									target="_blank">
-									Смотреть
-								</a>
-							</div>
-						</div>
-						<div class="illustrate__portfolio-card animate">
-							<img src="img/converse.png" alt="" draggable="false">
-							<div class="illustrate__card-info">
-								<div class="illustrate__card-title lng-Converse">
-									Converse promo
-								</div>
-								<a class="lng-view7" href="https://eroyeroy.github.io/Converse-promo/" target="_blank">
-									Смотреть
-								</a>
-							</div>
-						</div>
-						<div class="illustrate__portfolio-card animate">
-							<img src="img/7boltLanding.webp" alt="" draggable="false">
-							<div class="illustrate__card-info">
-								<div class="illustrate__card-title lng-7boltLanding">
-									7Bolt
-								</div>
-								<a class="lng-view7" href="https://eroyeroy.github.io/7bolt-Landing/" target="_blank">
-									Смотреть
-								</a>
-							</div>
-						</div>
-						<div class="illustrate__portfolio-card animate">
-							<img src="img/baking-shop.webp" alt="" draggable="false">
-							<div class="illustrate__card-info">
-								<div class="illustrate__card-title lng-baking">
-									Магазин выпечки
-								</div>
-								<a class="lng-view" href="https://eroyeroy.github.io/baking-shop/" target="_blank">
-									Смотреть
-								</a>
-							</div>
-						</div>
-						<div class="illustrate__portfolio-card animate">
-							<img src="img/roll-shop.webp" alt="" draggable="false">
-							<div class="illustrate__card-info">
-								<div class="illustrate__card-title lng-sushi">
-									Суши бар
-								</div>
-								<a class="lng-view2" href="https://eroyeroy.github.io/roll-shop/" target="_blank">
-									Смотреть
-								</a>
-							</div>
-						</div>
-						<div class="illustrate__portfolio-card animate">
-							<img src="img/motodarom.webp" alt="" draggable="false">
-							<div class="illustrate__card-info">
-								<div class="illustrate__card-title lng-motodarom">
-									Мотодаром
-								</div>
-								<a class="lng-view7" href="https://eroyeroy.github.io/motodarom/" target="_blank">
-									Смотреть
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="illustrate__skills">
-						<h2 class="illustrate__skills-title lng-skillsTitle">
-							Frontend – разработчик
+						<h2 class="title homepage__title">
+							<a href="https://vk.com/eroyu" target="_blank">Терсенев Владислав</a>
 						</h2>
-						<div class="illustrate__skills-cards">
-							<div class="container-two">
-								<div class="illustrate__skills-card">
-									<div class="illustrate__skills-mark">
-										<img src="img/mark.svg" alt="" draggable="false">
-									</div>
-									<div class="illustrate__skills-info">
-										<div class="illustrate__skills-subtitle">
-											HTML
-										</div>
-										<div class="illustrate__skill-desctiption lng-lvlMid">
-											Выше среднего
-										</div>
-									</div>
-								</div>
-								<div class="illustrate__skills-card">
-									<div class="illustrate__skills-mark">
-										<img src="img/mark.svg" alt="" draggable="false">
-									</div>
-									<div class="illustrate__skills-info">
-										<div class="illustrate__skills-subtitle">
-											CSS
-										</div>
-										<div class="illustrate__skill-desctiption lng-lvlMid2">
-											Выше среднего
-										</div>
-									</div>
-								</div>
-								<!-- <div class="illustrate__skills-card">
-									<div class="illustrate__skills-mark">
-										<img src="img/cancel.svg" alt="" draggable="false">
-									</div>
-									<div class="illustrate__skills-info">
-										<div class="illustrate__skills-subtitle">
-											React
-										</div>
-										<div class="illustrate__skill-desctiption lng-lvlLow">
-											Низкий
-										</div>
-									</div>
-								</div> -->
-								<div class="illustrate__skills-card">
-									<div class="illustrate__skills-mark">
-										<img src="img/cancel.svg" alt="" draggable="false">
-									</div>
-									<div class="illustrate__skills-info">
-										<div class="illustrate__skills-subtitle">
-											JavaScript
-										</div>
-										<div class="illustrate__skill-desctiption lng-lvlLow2">
-											Средний
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						<p class="subtitle homepage__subtitle">Web - разработчик</p>
+						<ul class="social">
+							<li class="social__item">
+								<a class="socail__link" href="https://t.me/EroyEroy">
+									<svg class="telegram" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="M20 40C31.0483 40 40 31.0483 40 20C40 8.95167 31.0483 0 20 0C8.95167 0 0 8.95167 0 20C0 31.0483 8.95167 40 20 40ZM9.15167 19.5667L28.435 12.1317C29.33 11.8083 30.1117 12.35 29.8217 13.7033L29.8233 13.7017L26.54 29.17C26.2967 30.2667 25.645 30.5333 24.7333 30.0167L19.7333 26.3317L17.3217 28.655C17.055 28.9217 16.83 29.1467 16.3133 29.1467L16.6683 24.0583L25.935 15.6867C26.3383 15.3317 25.845 15.1317 25.3133 15.485L13.8617 22.695L8.925 21.155C7.85333 20.815 7.83 20.0833 9.15167 19.5667V19.5667Z" fill="white" />
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="socail__link" href="https://github.com/EroyEroy">
+									<svg class="github" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="M19.9975 0.416321C8.955 0.416321 0 9.40632 0 20.4963C0 29.3663 5.73 36.8913 13.68 39.5488C14.68 39.7338 15.045 39.1138 15.045 38.5813C15.045 38.1038 15.0275 36.8413 15.0175 35.1663C9.455 36.3788 8.28 32.4738 8.28 32.4738C7.3725 30.1538 6.06 29.5363 6.06 29.5363C4.2425 28.2913 6.195 28.3163 6.195 28.3163C8.2025 28.4588 9.2575 30.3863 9.2575 30.3863C11.0425 33.4538 13.94 32.5688 15.08 32.0538C15.26 30.7563 15.7775 29.8713 16.35 29.3688C11.91 28.8613 7.24 27.1388 7.24 19.4463C7.24 17.2538 8.02 15.4613 9.3 14.0563C9.0925 13.5488 8.4075 11.5063 9.495 8.74382C9.495 8.74382 11.175 8.20382 14.995 10.8013C16.59 10.3563 18.3 10.1338 20.0025 10.1263C21.7 10.1363 23.4125 10.3563 25.01 10.8038C28.8275 8.20632 30.505 8.74632 30.505 8.74632C31.595 11.5113 30.91 13.5513 30.705 14.0588C31.9875 15.4638 32.76 17.2563 32.76 19.4488C32.76 27.1613 28.085 28.8588 23.63 29.3563C24.3475 29.9763 24.9875 31.2013 24.9875 33.0738C24.9875 35.7588 24.9625 37.9238 24.9625 38.5813C24.9625 39.1188 25.3225 39.7438 26.3375 39.5463C34.275 36.8863 40 29.3638 40 20.4963C40 9.40632 31.045 0.416321 19.9975 0.416321Z" fill="white" />
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="socail__link" href="https://vk.com/eroyu">
+									<svg class="vk" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path d="M20 0C16.0444 0 12.1776 1.17298 8.8886 3.37061C5.59962 5.56824 3.03617 8.69181 1.52242 12.3463C0.0086658 16.0009 -0.387401 20.0222 0.384303 23.9018C1.15601 27.7814 3.06082 31.3451 5.85787 34.1421C8.65492 36.9392 12.2186 38.844 16.0982 39.6157C19.9778 40.3874 23.9992 39.9913 27.6537 38.4776C31.3082 36.9638 34.4318 34.4004 36.6294 31.1114C38.827 27.8224 40 23.9556 40 20C40 14.6957 37.8929 9.60859 34.1421 5.85786C30.3914 2.10714 25.3043 0 20 0V0ZM31.5273 27.8273C30.9455 27.9091 28.1 27.8273 27.9523 27.8273C27.2167 27.8369 26.507 27.556 25.9773 27.0455C25.3773 26.4659 24.8409 25.8295 24.2546 25.2273C24.0818 25.0424 23.894 24.8721 23.6932 24.7182C23.225 24.3591 22.7614 24.4386 22.5409 24.9932C22.3688 25.59 22.2486 26.2006 22.1818 26.8182C22.1432 27.3773 21.7886 27.7273 21.1614 27.7659C20.7727 27.7864 20.3841 27.7955 20 27.7841C18.6001 27.7764 17.222 27.436 15.9796 26.7909C14.6348 26.0423 13.4631 25.0185 12.5409 23.7864C11.025 21.85 9.81364 19.7227 8.73183 17.5295C8.67501 17.4182 7.56592 15.0591 7.53864 14.9477C7.43864 14.5773 7.53864 14.2205 7.84546 14.0955C8.04092 14.0205 11.6955 14.0955 11.7568 14.0955C12.0287 14.0936 12.2941 14.1783 12.5148 14.3372C12.7354 14.4961 12.8997 14.7211 12.9841 14.9795C13.6603 16.7091 14.5852 18.3307 15.7296 19.7932C15.8899 19.988 16.0774 20.1587 16.2864 20.3C16.5841 20.5045 16.8659 20.4341 16.9886 20.0886C17.1343 19.6125 17.2198 19.1201 17.2432 18.6227C17.2636 17.6364 17.2432 16.9886 17.1886 16.0023C17.1523 15.3705 16.9296 14.8182 15.9977 14.6386C15.7114 14.5864 15.6864 14.35 15.8705 14.1136C16.2546 13.625 16.7796 13.5455 17.3682 13.5159C18.2455 13.4659 19.1227 13.5 20 13.5159H20.1909C20.5727 13.5145 20.9536 13.5534 21.3273 13.6318C21.5484 13.6769 21.749 13.7922 21.8992 13.9605C22.0495 14.1288 22.1415 14.3412 22.1614 14.5659C22.2065 14.8148 22.2255 15.0676 22.2182 15.3205C22.1955 16.3955 22.1432 17.4727 22.1318 18.5477C22.1213 18.9743 22.1602 19.4006 22.2477 19.8182C22.3727 20.3909 22.7659 20.5341 23.1568 20.1205C23.6634 19.5869 24.1277 19.0147 24.5455 18.4091C25.2859 17.3052 25.896 16.1192 26.3636 14.875C26.6182 14.2364 26.8182 14.0955 27.5 14.0955H31.3773C31.6078 14.0914 31.8377 14.1221 32.0591 14.1864C32.1375 14.207 32.2108 14.2435 32.2743 14.2937C32.3379 14.344 32.3905 14.4068 32.4287 14.4783C32.4669 14.5497 32.4899 14.6283 32.4963 14.7091C32.5027 14.7899 32.4924 14.8711 32.4659 14.9477C32.275 15.7977 31.8159 16.5227 31.3296 17.2205C30.5409 18.3364 29.7091 19.425 28.9023 20.5273C28.8052 20.6698 28.7164 20.8178 28.6364 20.9705C28.3318 21.5205 28.3546 21.8273 28.7955 22.2818C29.5 23.0068 30.2523 23.6841 30.9318 24.4295C31.4302 24.9719 31.8804 25.5567 32.2773 26.1773C32.7614 26.9591 32.4546 27.6955 31.5273 27.8273V27.8273Z" fill="white" />
+									</svg>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section>
 		</main>
 		<footer class="footer">
-			<div class="container">
-				<div class="footer__inner">
-					<a class="lng-footer" href="https://vk.com/eroyu" target="_blank">©&ensp;Терсенев
-						Владислав</a>
-					<span class="dateYear"></span>
-				</div>
-			</div>
 		</footer>
 	</div>
-	<script src="js/modal-img.js"></script>
-	<script src="js/switches.js"></script>
-	<script src="js/theme.js"></script>
-	<script src="js/animation.js"></script>
-	<script src="js/date.js"></script>
+	<div class="popup-menu">
+	</div>
 </body>
+<script src="js/main.js"></script>
 
 </html>
