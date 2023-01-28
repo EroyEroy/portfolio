@@ -437,20 +437,20 @@ window.addEventListener('resize', () => {
         div.style.width = parseInt(document.documentElement.clientWidth - 65) + 'px';
     }
 })
-function playVideo(mouseEvent, el) {
+function playVideo(mouseEvent, video) {
+    const isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > video.HAVE_CURRENT_DATA;
     if (!mouseEvent) return;
     if (mouseEvent === 'mouseover') {
-        const isPlaying = el.currentTime > 0 && !el.paused && !el.ended
-            && el.readyState > el.HAVE_CURRENT_DATA;
-
         if (!isPlaying) {
-            el.play();
-            el.setAttribute('loop', true);
+            video.play();
+            video.setAttribute('loop', true);
         }
     };
     if (mouseEvent === 'mouseleave') {
-        el.pause();
-        el.currentTime = 0;
-        el.removeAttribute('loop');
+        if (video.currentTime > 0) {
+            video.pause();
+            video.currentTime = 0;
+            video.removeAttribute('loop');
+        }
     };
 };
