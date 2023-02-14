@@ -128,6 +128,14 @@ let activePositionY = 0,
         <h2 class="title">Портфолио</h2>
         <div class="posts__content">
         <article class="post post-news">
+            <div class="post-media">
+                <video class="post__video" src="videos/vid8.mp4" muted style="object-position: 28%;"></video>
+                <a class="post-media-overlay" href="https://eroyeroy.github.io/lawyer/" target="_blank">
+                    <h2>Landing Page для услуг юриста</h2>
+                </a>
+            </div>
+        </article>
+        <article class="post post-news">
         <div class="post-media">
             <video class="post__video" src="videos/vid7.mp4" muted style="object-position: 20%;"></video>
             <a class="post-media-overlay" href="https://eroyeroy.github.io/Roongo/" target="_blank">
