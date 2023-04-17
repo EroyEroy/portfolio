@@ -531,6 +531,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .illustrate__skills-mark {
@@ -547,7 +550,6 @@ html {
   color: #26272C;
   font-weight: 600;
   font-size: 1.25em;
-  margin-bottom: 0.5em;
 }
 
 .illustrate__skill-desctiption {
@@ -690,27 +692,21 @@ html {
     width: calc(150px + 50 * (100vw - 320px) / 1600);
     height: calc(150px + 50 * (100vw - 320px) / 1600);
   }
-
   .info__title {
     font-size: calc(20px + 10 * (100vw - 320px) / 1600);
   }
-
   .info__description {
     font-size: calc(16px + 4 * (100vw - 320px) / 1600);
   }
-
   .card .card__description {
     font-size: calc(12px + 6 * (100vw - 320px) / 1600);
   }
-
   .info__switches button {
     font-size: calc(15px + 5 * (100vw - 320px) / 1600);
   }
-
   .illustrate__skills-subtitle {
     font-size: calc(16px + 4 * (100vw - 320px) / 1600);
   }
-
   .illustrate__skills-title {
     font-size: calc(20px + 5 * (100vw - 320px) / 1600);
   }

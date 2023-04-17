@@ -411,6 +411,7 @@ html{
 }
 .illustrate__skills-card{
 	display: flex;
+	align-items: center;
 }
 .illustrate__skills-mark{
 	width: 20%;
@@ -424,7 +425,6 @@ html{
 	color: #26272C;
 	font-weight: 600;
 	font-size: em(20);
-	margin-bottom: 0.5em;
 }
 .illustrate__skill-desctiption{
 	color: #979797;
