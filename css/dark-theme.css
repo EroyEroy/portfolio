@@ -1,0 +1,94 @@
+body {
+  background: #262a41;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #262a41;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #536DFE;
+  border: 4px solid #262a41;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7287ff;
+}
+
+.info__avatar-logo {
+  border: 5px solid #536DFE;
+}
+.info__title {
+  color: #fff;
+}
+.info__description {
+  color: #979797;
+}
+.info .card__number {
+  color: #fff;
+}
+.info .card__description {
+  color: #979797;
+}
+.info__cv-button {
+  background: #536DFE;
+  -webkit-box-shadow: 0px 0px 20px rgba(83, 109, 254, 0.5);
+          box-shadow: 0px 0px 20px rgba(83, 109, 254, 0.5);
+}
+.info__switches {
+  background: #373e64;
+}
+.info__switches button {
+  color: #fff;
+}
+.info__portfolio-btn.active, .info__skills-btn.active {
+  background: #262a41;
+}
+
+.illustrate__portfolio-card {
+  background-color: #979797;
+}
+
+.illustrate__card-info {
+  background-color: #00000099;
+}
+.illustrate__card-info a {
+  color: #fff;
+  background: #536DFE;
+}
+
+.illustrate__card-title {
+  color: #fff;
+}
+
+.illustrate__skills-title {
+  color: #fff;
+}
+
+.illustrate__skills-subtitle {
+  color: #fff;
+}
+
+.illustrate__skill-desctiption {
+  color: #979797;
+}
+
+.footer {
+  color: #979797;
+}
+.footer a {
+  color: #979797;
+}
+
+.header__button-theme[data-theme=dark] {
+  display: none;
+}
+
+.header__button-theme[data-theme=light] {
+  display: block;
+}

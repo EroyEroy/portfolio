@@ -1,0 +1,85 @@
+// скроллбар
+::-webkit-scrollbar{
+	width: 15px;
+}
+::-webkit-scrollbar-track{
+	background: #fff;
+}
+::-webkit-scrollbar-thumb{
+	background: #536DFE;
+	border: 4px solid #fff;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+	background: #3c4daf;
+}
+// стилизация секции info
+.info{
+	&__avatar-logo{
+		border: 5px solid #536DFE;
+	}
+	&__title{
+		color: #26272C;
+	}
+	&__description{
+		color: #979797;
+	}
+	.card{
+		&__number{
+			color: #26272C;
+		}
+		&__description{
+			color: #979797;
+		}
+	}
+	&__cv-button{
+		background: #536DFE;
+		box-shadow: 0px 0px 20px rgba(83, 109, 254, 0.5);
+	}
+	&__switches{
+		background: #C2C3C5;
+		button{
+			color: #26272C;
+		}
+	}
+	&__portfolio-btn.active,
+	&__skills-btn.active{
+		background: #fff;
+	}
+}
+// стилизация секции illustrate
+.illustrate__portfolio-card{
+	background-color: #979797;
+}
+.illustrate__card-info{
+	background-color: #00000099;
+	a{
+		color: #fff;
+		background: #536DFE;
+	}
+}
+.illustrate__card-title{
+	color: #fff;
+}
+.illustrate__skills-title{
+	color: #26272C;
+}
+.illustrate__skills-subtitle{
+	color: #26272C;
+}
+.illustrate__skill-desctiption{
+	color: #979797;
+}
+// стилизация footer
+.footer{
+	color: #979797;
+	a{
+		color: #979797;
+	}
+}
+.header__button-theme[data-theme="dark"]{
+	display: block;
+}
+.header__button-theme[data-theme="light"]{
+	display: none;
+}
