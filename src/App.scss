@@ -1,0 +1,99 @@
+@import './reset.scss';
+@import './var.scss';
+// стилизация секции info
+.info{
+	&__inner{
+		padding: 4.375em 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__avatar{
+		margin-bottom: 2.5em;
+	}
+	&__title{
+		margin-bottom: 0.8333333333333334em;
+	}
+	&__subtitle{
+		margin-bottom: 2em;
+	}
+}
+// аватарка
+.avatar{
+	width: 12.5rem;
+	height: 12.5rem;
+	border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+	border: 0.3125em solid var(--accent);
+	transition: all 1s ease-in-out;
+	animation: morph 8s ease-in-out infinite;
+	padding: 0.3125em;
+	cursor: pointer;
+	img{
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+	}
+}
+.telegram,
+.vk,
+.github{
+	path{
+		transition: all .3s ease-in-out;
+		fill: var(--second2);
+	}
+}
+// заголовок
+.title{
+	font-size: 1.875em;
+	color: var(--second);
+	font-weight: 700;
+}
+// подзаголовок
+.subtitle{
+	font-size: 1.25em;
+	color: var(--second2);
+	font-weight: 600;
+}
+// социальные сети
+.social{
+	display: flex;
+	align-items: center;
+	margin-bottom: 2.5em;
+	&__item{
+		&:hover{
+			path{
+				fill: var(--accent);
+			}
+		}
+	}
+	&__item + &__item{
+		margin-left: 1.25em;
+	}
+}
+// анимация аватарки
+@keyframes morph {
+	0% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+
+	50% {
+		border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+	}
+
+	100% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.title{
+		font-size: 20px;
+	}
+	.subtitle{
+		font-size: 16px;
+	}
+	.avatar{
+		width: 9.375em;
+		height: 9.375em;
+	}
+}
