@@ -1,0 +1,31 @@
+// Обнуление
+*{padding: 0;margin: 0;border: 0;}
+*,*::before,*::after{ -moz-box-sizing: border-box;-webkit-box-sizing: border-box; box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus, a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height: 100%;width: 100%;font-size: 100%;line-height: 1;font-size: 16px;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
+input,button,textarea{font-family: inherit;font-size: inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer; background: none;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a{font-size: inherit; color: inherit;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
+// отключение стрелок у инпутов
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type=number], input[type=number]:focus, input[type=number]:hover {
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: textfield;
+};
+// плавная прокрутка
+html{
+	scroll-behavior: smooth;
+};

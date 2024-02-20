@@ -1,0 +1,303 @@
+@use './normalize';
+@use './var';
+@use './media' as *;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+// настройка для прижатия footer к низу страницы
+.wrapper{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+};
+.main{
+	flex: 1 1 auto;
+};
+.changeLang{
+	font-size: 20px;
+	z-index: 9999;
+	position: fixed;
+	top: 30px;
+	right: 30px;
+}
+// стили container
+.container{
+	max-width: 990px;
+	margin: 0 auto;
+	padding: 0 20px;
+};
+body{
+	font-family: "Press Start 2P", system-ui;
+	font-weight: 400;
+	font-style: normal;
+	background-color: var(--second);
+	color: var(--accent);
+	text-transform: uppercase;
+	cursor: url("../images/icons/cursor.svg"), default !important;
+	line-height: 1.6;
+	letter-spacing: 2px;
+	&::-webkit-scrollbar {
+		width: 5px;
+		background-color: transparent;
+	};
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--accent);
+		border-radius: 5px;
+	};
+};
+button,
+a{
+	color: inherit;
+	cursor: url("../images/icons/pointer.svg"), pointer !important;
+}
+.tabs{
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	border: 3px solid var(--accent);
+	gap: 25px;
+	max-width: 100%;
+	&__button{
+		&.active{
+			background-color: var(--accent);
+			color: var(--second);
+		}
+	}
+}
+section{
+	z-index: 1;
+}
+.title{
+	font-size: 30px;
+	@include max700{
+		font-size: 20px;
+	}
+	@include max479{
+		font-size: 16px;
+	}
+	@include max400{
+		font-size: 13px;
+	}
+}
+.button{
+	padding: 10px;
+	transition: background-color 200ms cubic-bezier(.6, -.28, .735, .045);
+	&:hover{
+		background-color: var(--accent);
+		color: var(--second);
+	}
+}
+.portfolio{
+	&__inner{
+		padding: 70px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__avatar{
+		width: 250px;
+		height: 250px;
+		border: 5px solid var(--accent);
+		margin-bottom: 40px;
+		animation: flashing 10s infinite;
+		img{
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__title{
+		margin-bottom: 40px;
+	}
+	&__subtitle{
+		margin-bottom: 40px;
+		@include max479{
+			font-size: 14px;
+		}
+		@include max400{
+			font-size: 12px;
+		}
+		@include max350{
+			font-size: 10px;
+		}
+	}
+	&__social{
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		font-size: 14px;
+		margin-bottom: 40px;
+		@include max400{
+			font-size: 10px;
+		}
+	}
+	&__tabs{
+		font-size: 20px;
+		margin-bottom: 40px;
+		@include max479{
+			width: 100%;
+			font-size: 16px;
+		}
+		.tabs__button{
+			@include max479{
+				flex-grow: 1;
+			}
+			@include max400{
+				font-size: 12px;
+			}
+		}
+	}
+	&__skills{
+		display: grid;
+		grid-template-columns: repeat(2, minmax(120px, 1fr));
+		grid-auto-rows: auto;
+		grid-template-rows: auto;
+		gap: 40px;
+		justify-content: center;
+		@include max600{
+			gap: 20px;
+		}
+		@include max479{
+			grid-template-columns: repeat(1,1fr);
+		}
+	}
+	&__skill{
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		&:nth-child(even){
+			span{
+				order: -1;
+				text-align: right;
+				@include max479{
+					order: 0;
+					text-align: left;
+				}
+			}
+		}
+		&:nth-child(3n+2){
+			animation: flashing 5s infinite;
+		}
+		&:nth-child(3n+1){
+			animation: flashing2 5s infinite;
+		}
+		span{
+			flex-grow: 1;
+			@include max600{
+				font-size: 14px;
+			}
+		}
+		svg{
+			min-width: 32px;
+			height: 32px;
+			@include max479{
+				min-width: 22px;
+				height: 22px;
+			}
+		}
+	}
+	&__cards{
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 455px));
+		grid-auto-rows: 250px;
+		grid-template-rows: 250px;
+		grid-gap: 40px;
+		justify-content: center;
+	}
+	&__card{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 3px solid var(--accent);
+		font-size: 18px;
+		position: relative;
+		transition: all 200ms cubic-bezier(.6, -.28, .735, .045);
+		&:nth-child(3n+2){
+			animation: flashing 5s infinite;
+		}
+		&:nth-child(3n+1){
+			animation: flashing2 5s infinite;
+		}
+		&:hover{
+			color: transparent;
+			.portfolio__cardBody{
+				pointer-events: all;
+				color: var(--accent);
+			}
+		}
+	}
+	&__cardBody{
+		transition: all 200ms cubic-bezier(.6, -.28, .735, .045);
+		color: transparent;
+		pointer-events: none;
+		position: absolute;
+		background-color: transparent;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@keyframes flashing {
+	0% {
+		opacity: 1;
+	}
+	69%{
+		opacity: 1;
+	}
+	70%{
+		opacity: .5;
+	}
+	71%{
+		opacity: .5;
+	}
+	72%{
+		opacity: 1;
+	}
+	73%{
+		opacity: .5;
+	}
+	74%{
+		opacity: 1;
+	}
+	78%{
+		opacity: 1;
+	}
+	79%{
+		opacity: .5;
+	}
+	80%{
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flashing2 {
+	0% {
+		opacity: 1;
+	}
+	49%{
+		opacity: 1;
+	}
+	50%{
+		opacity: .5;
+	}
+	51%{
+		opacity: .5;
+	}
+	52%{
+		opacity: 1;
+	}
+	53%{
+		opacity: .5;
+	}
+	54%{
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
